@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- 🔐 Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  
+    <!-- 🌐 SEO & Accessibility -->
+    <title>Contact | Jonathan Aguasvivas</title>
+  
+  
+    <!-- 📱 Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+  
+    <!-- 🖋️ Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  
+    <!-- 🎨 Your CSS -->
+    <link rel="stylesheet" href="contact.css" />
+  <style>
+
+    :root {
+      --max-width: 1440px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    html, body {
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    .contact-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .contact-page h1 {
+      font-size: 4vw;
+      font-family: Georgia, serif;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .contact-page p {
+      font-size: 1.1rem;
+      color: #cccccc;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      animation: fadeInUp 1.4s ease-out forwards;
+      opacity: 0;
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      animation: fadeInUp 1.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    input, textarea {
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      color: white;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #888;
+    }
+
+    button {
+      padding: 0.75rem 1rem;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e6e6e6;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .back-link {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 0.9rem;
+      color: #999;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #fff;
+    }
+    #footer {
+  background-color: #000;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer__info p {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 6px 0;
+}
+
+.footer__info a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__info a:hover {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+  </style>
+</head>
+<body>
+
+  <a href="portflio2.html" class="back-link">← Back to Home</a>
+
+  <section class="contact-page">
+    <h1>Get in Touch</h1>
+    <p>Whether you have a question, a project in mind, or just want to say hello — I’d love to hear from you. Fill out the form below and I’ll get back to you as soon as I can.</p>
+
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer id="footer">
+    <div class="footer__container">
+      <div class="footer__info">
+        <p>© 2025 Jonathan Aguasvivas</p>
+        <p>Email: <a href="mailto:your.email@example.com">Jonathanaguasvivas09@gmail.com</a></p>
+        <p>
+          <a href="https://github.com/E01iNNiTY" target="_blank">GitHub</a> | 
+          <!-- <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> -->
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    const form = document.querySelector('.contact-form');
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      setTimeout(() => {
+        window.location.href = 'portflio2.html';
+      }, 500); 
+    });
+  </script>
+  
+
+</body>
+</html>

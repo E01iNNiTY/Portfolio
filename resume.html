@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- 🔐 Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  
+    <!-- 🌐 SEO -->
+    <title>Resume | Jonathan Aguasvivas</title>
+    
+    <!-- 📱 Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+  
+    <!-- 🖋️ Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  
+    <!-- 🎨 Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+    <!-- 🎨 Your CSS -->
+    <link rel="stylesheet" href="resume.css" />
+  
+  <style>
+    :root {
+      --max-width: 900px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+    }
+
+    html, body {
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    .resume-page {
+      padding: 4rem 2rem;
+      max-width: var(--max-width);
+      margin: auto;
+      animation: fadeInUp 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .back-link {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 0.9rem;
+      color: #999;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #fff;
+    }
+
+    .icon-links {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .icon-links a {
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    .icon-links a:hover {
+      color: white;
+    }
+
+    .download-resume {
+      margin-top: 2rem;
+    }
+
+    .download-resume a {
+      padding: 0.5rem 1rem;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .resume-page {
+        padding: 2rem 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="portflio2.html" class="back-link">← Back to Home</a>
+
+  <div class="resume-page">
+    <h1>Jonathan Aguasvivas</h1>
+    <div class="icon-links">
+      <a href="mailto:jonathanaguasvivas09@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="download-resume">
+      <a href="resume.pdf" download>Download PDF Resume</a>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>Madison Park Technical Vocational High School</strong> — Boston, MA<br>Class of 2025</p>
+    </div>
+
+    <div class="section">
+      <h2>Objective</h2>
+      <p>I am a Senior studying computer programming and web design, committed to continuous learning and making meaningful contributions to a collaborative work environment. My goal is to grow professionally, exceed expectations, and bring value to any workplace I join.</p>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Intermediate: Google Docs, Sheets, Slides, Microsoft Word</li>
+        <li>Programming: HTML, CSS, Python, JavaScript</li>
+        <li>Design: Adobe Photoshop</li>
+        <li>Languages: English & Spanish (Bilingual)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <p><strong>JJ's Shop</strong> — Boston, MA (June 2021 – Mar 2023)</p>
+      <ul>
+        <li>Operated a small ecommerce sneaker resale business</li>
+        <li>Handled customer service and inquiries</li>
+        <li>Managed inventory and sales data for demand forecasting</li>
+      </ul>
+      <br>
+      <p><strong>Mass General Hospital</strong> — Boston, MA (March 2024 – Present)</p>
+      <ul>
+        <li>Provided personalized food service based on patient dietary needs</li>
+        <li>Supported nutritional planning with excellent customer service</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>OSHA 10 Certification — Feb 2024</li>
+        <li>PCEP: Entry-Level Python Programmer — Feb 2025</li>
+        <li>IT Specialist - HTML & CSS (Certiport) — Jan 2025</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Interests & Activities</h2>
+      <ul>
+        <li>Fitness</li>
+        <li>Data Collection</li>
+        <li>Financial Markets</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

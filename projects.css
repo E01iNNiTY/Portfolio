@@ -1,0 +1,165 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+letter-spacing: -.05em;
+font-weight: 400;
+color: white;
+}
+
+html, body{
+    background-color: black;
+    overscroll-behavior: none;
+}
+
+p{
+    margin: .5rem 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    text-decoration: none;
+    mix-blend-mode: difference;
+}
+
+.li {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    padding: 1rem 0;
+    width: 20%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; 
+    mix-blend-mode: difference;
+}
+
+.header{
+    position: fixed;
+    z-index: 3;
+    mix-blend-mode: difference;
+    left: 5vw;
+    top: 5vh;
+}
+
+
+main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    left: -25%;
+    top:-25%;
+    transform-origin: center;
+    padding: 5rem;
+    display: flex;
+    will-change: transform;
+}
+
+.column{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column:nth-child(2){
+    justify-content: space-between;
+}
+
+.item{
+    position: relative;
+    width: 25vw;
+    height: 20vh;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+img{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.content{
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    opacity: 0;
+    min-height: 100vh;
+    pointer-events: none;
+    transform: .5s;
+    background-color: black;
+    z-index: 1;
+    height: 100vh;
+}
+
+.content.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.content__main__img{
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: .5rem;
+}
+
+.content__container {
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.content__text{
+    margin: 1rem 0;
+}
+
+.close:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  :hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  

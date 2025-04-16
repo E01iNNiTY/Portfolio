@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- 🔐 Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  
+    <!-- 🌐 SEO & Metadata -->
+    <title>About Me</title>
+
+    <!-- 📱 Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+  
+    <!-- 🖋️ Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  
+    <!-- 🎨 Embedded Styles -->
+    <style>
+      :root {
+        --max-width: 1440px;
+      }
+  
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+      }
+  
+      html, body {
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+  
+      #about-page {
+        background-color: #000;
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+      }
+  
+      .about__content {
+        max-width: 800px;
+        text-align: center;
+        line-height: 1.6;
+        animation: fadeInUp 1.5s ease-out forwards;
+        opacity: 0;
+      }
+  
+      .about__content h1 {
+        font-family: Georgia, serif;
+        font-size: 4vw;
+        margin-bottom: 1.5rem;
+      }
+  
+      .about__content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.3px;
+        color: #cccccc;
+      }
+  
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  
+      .back-link {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-size: 0.9rem;
+        color: #999;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+  
+      .back-link:hover {
+        color: #fff;
+      }
+  
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+  
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+        transition: background-color 0.3s ease;
+      }
+  
+      :hover::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  
+<body>
+
+  <a href="portflio2.html" class="back-link">← Back to Home</a>
+
+  <section id="about-page">
+    <div class="about__content">
+      <h1>About Me</h1>
+      <p>Jonathan Aguasvivas</p>
+  
+      <p>I’m an ambitious, innovation-driven developer with 2 years of programming experience and a deep passion for building impactful, modern platforms. I thrive at the intersection of efficiency and code, where ideas evolve into intelligent, scalable solutions.</p>
+  
+      <p>Currently focused on mastering emerging technologies, including artificial intelligence and full-stack development, I’m constantly building, refining, and experimenting to push what's possible.</p>
+  
+      <p>I'm eager to grow within a forward-thinking team, contribute to meaningful projects, and become a long-term asset in shaping tomorrow’s digital landscape. The journey is just beginning — and I’m all in.</p>
+    </div>
+  </section>
+  
+
+</body>
+</html>
