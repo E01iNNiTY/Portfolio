@@ -6,24 +6,33 @@
       
         <!-- 🔐 Security Headers -->
         <meta http-equiv="Content-Security-Policy"
-              content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';" />
+              content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline';" />
         <meta http-equiv="X-Content-Type-Options" content="nosniff" />
         <meta http-equiv="X-Frame-Options" content="DENY" />
         <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
       
         <!-- 🌐 SEO & Branding -->
         <title>Jonathan Aguasvivas Portfolio</title>
-       
+      
         <!-- 📱 Favicon -->
         <link rel="icon" type="image/png" href="favicon.png" />
       
-        <!-- 🖋️ Fonts (optional if using Google Fonts) -->
+        <!-- 🖋️ Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
       
-        <!-- 🎨 Your Styles -->
+        <!-- 🎨 Styles -->
         <link rel="stylesheet" href="portflio2.css" />
+      
+        <!-- 📊 Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8N9NMXP84"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-T8N9NMXP84');
+        </script>
       </head>
       
     <body>
