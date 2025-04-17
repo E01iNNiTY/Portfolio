@@ -162,4 +162,57 @@ img{
   :hover::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.2);
   }
+  @media (hover: none) and (pointer: coarse) {
+    html, body {
+      height: auto !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: auto !important;
+    }
+  
+    main {
+      position: relative !important;
+      height: auto !important;
+      overflow-y: auto !important;
+    }
+  
+    .container {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      left: 0 !important;
+      top: 0 !important;
+      padding: 2rem;
+      flex-direction: column;
+    }
+  
+    .column {
+      flex-direction: column !important;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .item {
+      width: 90vw;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+  
+    .header {
+      position: static;
+      margin-bottom: 2rem;
+    }
+  
+    ul {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  
+    .li {
+      width: 100%;
+      text-align: center;
+    }
+  }
   

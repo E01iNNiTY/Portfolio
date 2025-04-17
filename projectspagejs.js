@@ -100,20 +100,31 @@ let mouseCoordinates = {
     targetY: 0
 };
 
-window.addEventListener('mousemove', (e) => {
-    mouseCoordinates.targetX = e.clientX - window.innerWidth / 2;
-    mouseCoordinates.targetY = e.clientY - window.innerHeight / 2;
-});
+// Only run mouse movement logic on desktop (non-touch)
+const isDesktop = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-function animate() {
-    if (animating) {
-        mouseCoordinates.x = lerp(mouseCoordinates.x, mouseCoordinates.targetX, 0.075);
-        mouseCoordinates.y = lerp(mouseCoordinates.y, mouseCoordinates.targetY, 0.075);
-        let { x, y } = mouseCoordinates;
-        container.style.transform = `translate3d(${-x}px, ${-y}px, 0)`;
+if (isDesktop) {
+    window.addEventListener('mousemove', (e) => {
+        mouseCoordinates.targetX = e.clientX - window.innerWidth / 2;
+        mouseCoordinates.targetY = e.clientY - window.innerHeight / 2;
+    });
+
+    function animate() {
+        if (animating) {
+            mouseCoordinates.x = lerp(mouseCoordinates.x, mouseCoordinates.targetX, 0.075);
+            mouseCoordinates.y = lerp(mouseCoordinates.y, mouseCoordinates.targetY, 0.075);
+            let { x, y } = mouseCoordinates;
+            container.style.transform = `translate3d(${-x}px, ${-y}px, 0)`;
+        }
+
+        requestAnimationFrame(animate);
     }
 
-    window.requestAnimationFrame(animate);
+    animate();
+} else {
+    // On mobile, make sure the container is static so users can scroll
+    container.style.transform = 'none';
 }
+
 
 animate();
