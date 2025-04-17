@@ -6,7 +6,7 @@
   
     <!-- 🔐 Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;" />
+  content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
@@ -23,6 +23,7 @@
   
     <!-- 🎨 Your CSS -->
     <link rel="stylesheet" href="contact.css" />
+    </head>
   <style>
 
     :root {
@@ -186,7 +187,10 @@
 
   <section class="contact-page">
     <h1>Get in Touch</h1>
-    <p>Whether you have a question, a project in mind, or just want to say hello — I’d love to hear from you. Fill out the form below and I’ll get back to you as soon as I can.</p>
+    <p>
+      Whether you have a question, a project in mind, or just want to say hello —
+      I’d love to hear from you. Fill out the form below and I’ll get back to you as soon as I can.
+    </p>
 
     <form class="contact-form" action="#" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -194,29 +198,42 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+
+    <!-- ✅ Success message -->
+    <p class="form-success" style="display:none; color: lightgreen; text-align: center; margin-top: 1rem;">
+      ✅ Your message was sent successfully!
+    </p>
   </section>
 
   <footer id="footer">
     <div class="footer__container">
       <div class="footer__info">
         <p>© 2025 Jonathan Aguasvivas</p>
-        <p>Email: <a href="mailto:your.email@example.com">Jonathanaguasvivas09@gmail.com</a></p>
+        <p>Email: <a href="mailto:Jonathanaguasvivas09@gmail.com">Jonathanaguasvivas09@gmail.com</a></p>
         <p>
-          <a href="https://github.com/E01iNNiTY" target="_blank">GitHub</a> | 
-          <!-- <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> -->
+          <a href="https://github.com/E01iNNiTY" target="_blank">GitHub</a>
         </p>
       </div>
     </div>
   </footer>
-  
+
+  <!-- ✅ Wrapped inside DOMContentLoaded -->
   <script>
-    const form = document.querySelector('.contact-form');
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('.contact-form');
+      const success = document.querySelector('.form-success');
   
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 500); 
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          success.style.display = 'block';
+  
+          setTimeout(() => {
+            // ✅ redirect to homepage safely
+            window.location.href = window.location.origin + '/';
+          }, 2000);
+        });
+      }
     });
   </script>
   
